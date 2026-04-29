@@ -1,0 +1,46 @@
+<div class="card p-4">
+    <h3>Add Unavailability</h3>
+
+    <div class="field grid">
+        <label for="employee" class="col-12 mb-2 md:col-2 md:mb-0">Employee</label>
+        <div class="col-12 md:col-10">
+            <ejs-combobox id='employee' [dataSource]='employees' [fields]='employeeFields'
+                placeholder='Select an employee' [(ngModel)]="employeeId">
+            </ejs-combobox>
+        </div>
+    </div>
+
+    <div class="field grid">
+        <label for="start" class="col-12 mb-2 md:col-2 md:mb-0">Start Date</label>
+        <div class="col-12 md:col-10">
+            <p-calendar id="start" [(ngModel)]="startDate" [showTime]="true" [showIcon]="true"
+                dateFormat="yy-mm-dd"></p-calendar>
+        </div>
+    </div>
+
+    <div class="field grid">
+        <label for="end" class="col-12 mb-2 md:col-2 md:mb-0">End Date</label>
+        <div class="col-12 md:col-10">
+            <p-calendar id="end" [(ngModel)]="endDate" [showTime]="true" [showIcon]="true"
+                dateFormat="yy-mm-dd"></p-calendar>
+        </div>
+    </div>
+
+    <div class="field grid">
+        <label for="reason" class="col-12 mb-2 md:col-2 md:mb-0">Reason</label>
+        <div class="col-12 md:col-10">
+            <ejs-combobox id='reason' [dataSource]='reasons' [fields]='reasonFields' placeholder='Select a reason'
+                [(ngModel)]="reason">
+                <ng-template #itemTemplate let-data>
+                    <div>
+                        <span class='code'>{{data.code}}</span> - <span class='name'>{{data.name}}</span>
+                    </div>
+                </ng-template>
+            </ejs-combobox>
+        </div>
+    </div>
+
+    <div class="flex justify-content-end">
+        <p-button label="Submit" icon="pi pi-check" (click)="onSubmit()"></p-button>
+    </div>
+</div>

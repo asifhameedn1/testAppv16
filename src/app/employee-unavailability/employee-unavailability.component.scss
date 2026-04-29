@@ -1,0 +1,65 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+.unavailable {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.team-meeting {
+    background-color: #FFA726;
+}
+
+/* Orange */
+.lunch {
+    background-color: #66BB6A;
+}
+
+/* Green */
+.training {
+    background-color: #29B6F6;
+}
+
+/* Light Blue */
+.client-call {
+    background-color: #AB47BC;
+}
+
+/* Purple */
+.doctor {
+    background-color: #EF5350;
+}
+
+/* Red */
+.pto {
+    background-color: #78909C;
+}
+
+/* Blue Grey */
+
+.unavailable-multiple {
+    background: repeating-linear-gradient(45deg,
+            #424242,
+            #424242 5px,
+            #616161 5px,
+            #616161 10px);
+}
+
+.available {
+    background-color: #f9f9f9;
+}
+
+::ng-deep .p-datatable-wrapper {
+    // Ensure horizontal scrolling works smoothly
+}
+
+th {
+    font-size: 0.8rem;
+    padding: 0.5rem !important;
+}
+
+td {
+    height: 3rem; // Fixed height for rows
+}

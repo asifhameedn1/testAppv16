@@ -1,0 +1,65 @@
+.control-section {
+    padding: 20px;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+    .schedule-header {
+        margin-bottom: 20px;
+        
+        h2 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 5px 0 0;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    }
+}
+
+.template-wrap {
+    height: 100%;
+    width: 100%;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    overflow: hidden;
+
+    .subject {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+::ng-deep .e-schedule {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e0e6ed;
+
+    .e-timeline-view {
+        .e-resource-left-td {
+            width: 180px;
+        }
+        
+        .e-appointment {
+            border-radius: 6px;
+        }
+    }
+}
